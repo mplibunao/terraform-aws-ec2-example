@@ -1,7 +1,10 @@
+# What this module does
+
 Terraform Module to provision an EC2 Instance with Security Group with ingress rules for HTTP, HTTPS, and ICMP
 
 Not intended for production use. Just showcasing how to create a custom module on Terraform Registry
 
+# Example
 
 ```hcl
 # main.tf
