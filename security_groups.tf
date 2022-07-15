@@ -5,7 +5,7 @@ data "aws_vpc" "default" {
 resource "aws_security_group" "my_server" {
   name        = "sg_my_server"
   description = "MyServer Security Group"
-  vpc_id      = data.aws_vpc.default.id
+  vpc_id      = var.vpc_id ? var.vpc_id : data.aws_vpc.default.id
 
   dynamic "ingress" {
     for_each = var.ingress_rules

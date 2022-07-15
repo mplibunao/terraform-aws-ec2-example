@@ -60,3 +60,8 @@ variable "instance_name" {
   type        = string
   description = "Name to be used for the EC2 instance"
 }
+
+variable "vpc_id" {
+  type        = string
+  description = "(Optional) VPC id to use in security groups. Will use the default vpc in the region if unspecified"
+}
