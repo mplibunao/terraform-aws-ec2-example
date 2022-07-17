@@ -33,6 +33,7 @@ resource "aws_instance" "my_server" {
   instance_type          = var.instance_type
   key_name               = aws_key_pair.deployer.key_name
   vpc_security_group_ids = [aws_security_group.my_server.id]
+  subnet_id              = var.subnet_id
 
   tags = {
     Name = var.instance_name
