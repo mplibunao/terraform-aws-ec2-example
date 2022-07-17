@@ -34,6 +34,7 @@ resource "aws_instance" "my_server" {
   key_name               = aws_key_pair.deployer.key_name
   vpc_security_group_ids = [aws_security_group.my_server.id]
   subnet_id              = var.subnet_id
+  user_data              = var.user_data_file != null ? "${file(var.user_data_file)}" : null
 
   tags = {
     Name = var.instance_name
