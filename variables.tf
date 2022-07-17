@@ -72,3 +72,8 @@ variable "subnet_id" {
   description = "(Optional) Subnet id to use for the ec2 instance. Will select from one of the default subnets if not specified"
   default     = null
 }
+
+variable "user_data_file" {
+  type        = string
+  description = "(Optional) User data script to run during ec2 start up"
+}
