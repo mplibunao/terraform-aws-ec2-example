@@ -64,4 +64,11 @@ variable "instance_name" {
 variable "vpc_id" {
   type        = string
   description = "(Optional) VPC id to use in security groups. Will use the default vpc in the region if unspecified"
+  default     = null
+}
+
+variable "subnet_id" {
+  type        = string
+  description = "(Optional) Subnet id to use for the ec2 instance. Will select from one of the default subnets if not specified"
+  default     = null
 }
